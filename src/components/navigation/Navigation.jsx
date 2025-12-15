@@ -10,20 +10,19 @@ const Navigation = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    { name: "Patients", href: "/patients" },
+    { name: "Doctors", href: "/doctors" },
+    { name: "Hospital", href: "/hospitals" },
     {
-      name: "Patient",
-      submenu: [
-        { name: "Patients", href: "/patients" },
+      name: "Services",
+      submenu: [        
         { name: "PAP", href: "/pap" },
         { name: "FAS", href: "/fas" },
         { name: "VAS", href: "/vas" },
       ],
     },
-       
-    { name: "Doctors", href: "/doctors" },
-    { name: "Hospital", href: "/hospitals" },
-    { name: "About Us", href: "/about-us" },
-    { name: "Contact Us", href: "/contact-us" },
+    { name: "About & Contact Us", href: "/about-us" },
+    // { name: "Contact Us", href: "/contact-us" },
     // { name: "Privacy Policy", href: "/privacy-policy" },
   ];
 
