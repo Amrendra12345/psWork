@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* custom property */
+
+:root {
+  --font-inter: "Inter", sans-serif;
+  --font-epilogue: "Epilogue", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --main-theme-background: #1a434e;
+  --secondary-theme-backgound: #F3F8F9;
+  --main-primary-text-color: #1a434e;
+  --secondary-text-color: #6E6E6E;
+  --max-width: 1280px;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--font-inter);
+}
+
+.font-epilogue {
+  font-family: var(--font-epilogue);
+}
+.font-poppins{
+  font-family: var(--font-poppins);
+}
+
+.bottom-nav svg path {
+  fill: #00312b;
+}
+
+.animate-carousel {
+  animation: carousel 40s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused !important;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
