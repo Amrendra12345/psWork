@@ -3,6 +3,7 @@ import CardUpperEffect from "@/components/cardUpperEffect/CardUpperEffect";
 import CareTakercard from "@/components/caretakercard/CareTakercard";
 import DownloadAppCard from "@/components/downloadappcard/DownloadAppCard";
 import Hero from "@/components/hero/Hero";
+import HeroPacients from "@/components/hero/HeroPacients";
 import SmartTools from "@/components/smarttools/SmartTools";
 import React from "react";
 const offersData = [
@@ -56,14 +57,19 @@ const offersData = [
 ];
 const page = () => {
   return (
-    <>
+    <>    
       <Hero
         title="From Confusion to Clarity in Critical Care"
         subtitle="icanheal helps you access high-quality cancer and critical care treatment by simplifying the journey, from financial support to finding the right doctors and communities. All in one unified platform."
         bgImage="/assets/patient_page_banner.png"
         statsNumber="2k"
         smallInfo="Patients already simplifying critical care"
-        btnText="DOWNLOAD THE APP"
+        btnText="DOWNLOAD THE APP"  
+        bgImageSize="bg-[size:113%_76%] md:bg-[size:75%_100%]"
+        bgPostion="bg-[position:17%_119%] md:bg-[position:124%_0%]"
+        bgHeight="h-[500px] md:h-[550px] lg:h-[650px]"
+       
+        
       />
       <CardUpperEffect />
       <DownloadAppCard

@@ -1,10 +1,15 @@
 import Image from "next/image";
 import React from "react";
 
-const HeroSecondBanner = ({ heroTitle, heroDescription, heroBannerImg }) => {
+const HeroSecondBanner = ({ heroTitle, heroDescription, heroBannerImg,bgImageSize,bgPostion,bgHeight,bgColor }) => {
   return (
-    <section className="relative overflow-hidden bg-[url('/assets/hero_main_banner_img.png')] bg-cover bg-center bg-no-repeat aspect-[16/9] w-full h-[400px] md:min-h-[450px] lg:min-h-[550px] px-5 py-5 md:py-20">
-      <div className="absolute right-1 md:right-[70px] bottom-0 w-[180px] sm:w-[200px] md:w-[500px] lg:w-[520px]">
+    <section className={`relative overflow-hidden bg-[url('/assets/hero_main_banner_img.png')]  bg-no-repeat aspect-[16/9] w-full px-5 py-5 md:py-20
+         ${bgColor}
+         ${bgHeight}
+        ${bgImageSize}
+        ${bgPostion}`
+         }>
+      <div className="absolute right-[122px] md:right-[110px] bottom-0 w-[280px] sm:w-[200px] md:w-[500px] lg:w-[600px]">
         <Image
           src={heroBannerImg}
           alt="mobile"

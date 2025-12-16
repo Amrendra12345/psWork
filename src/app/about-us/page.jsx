@@ -11,7 +11,11 @@ const page = () => {
       <HeroSecondBanner
         heroTitle="A Smarter, Kinder Way to Fight Cancer and Rare Diseases"
         heroDescription="icanheal is a healthcare platform that helps cancer and critical care patients access the right care at the right time—without being held back by cost, confusion, or isolation."
+        bgColor="bg-[#1a434e]"
         heroBannerImg="/assets/phonewithhand.png"
+        bgImageSize="bg-[size:126%_58%] md:bg-[size:75%_111%]"
+        bgPostion="bg-[position:117%_101%] md:bg-[position:100%_0%]"
+        bgHeight="h-[465px] md:h-[550px] lg:h-[650px]"
       />
       <CardUpperEffect />
       <section className="px-5 pt-2 pb-10 md:pb-16">

@@ -28,6 +28,9 @@ const Home = () => {
         statsNumber="10k"
         smallInfo="families already simplifying critical care"
         btnText="DOWNLOAD THE APP"
+        bgImageSize="bg-[size:112%_72%] md:bg-[size:77%_111%]"
+        bgPostion="bg-[position:109%_83%] md:bg-[position:102%_30%]"
+        bgHeight="h-[450px] md:h-[550px] lg:h-[650px]"
       />
       <CardUpperEffect />
       <DownloadAppCard

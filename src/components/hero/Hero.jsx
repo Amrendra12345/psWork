@@ -7,15 +7,22 @@ const Hero = ({
   statsNumber,
   smallInfo,
   btnText,
+  bgPostion,
+  bgHeight,
+  bgImageSize,
+  
 }) => {
   return (
+    
     <section
-      className="relative h-[430px] md:h-[550px] lg:h-[650px] text-white pt-0 md:pt-10 lg:pt-16 w-full aspect-[16/9]  bg-no-repeat bg-[var(--main-theme-background)] bg-[position:109%_83%] 
-bg-[size:112%_72%]
-md:bg-[position:102%_30%] 
-md:bg-[size:77%_111%]"
+      className={`relative text-white pt-0 md:pt-10 lg:pt-16 w-full aspect-[16/9]  bg-no-repeat bg-[var(--main-theme-background)] 
+        ${bgHeight}
+        ${bgImageSize}
+        ${bgPostion}
+        
+        `}
       style={{
-        backgroundImage: `linear-gradient(0deg, rgba(26, 67, 78, 0) 59%, #1A434E 94.06%),linear-gradient(304deg, rgba(26, 67, 78, 0) 42.39%, #1A434E 92.03%),
+        backgroundImage: `linear-gradient(293deg, rgba(26, 67, 78, 0) 59%, #1A434E 94.06%),linear-gradient(304deg, rgba(26, 67, 78, 0) 42.39%, #1A434E 92.03%),
       url(${bgImage})`, 
       
       }}

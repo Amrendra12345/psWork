@@ -31,7 +31,10 @@ const page = () => {
         bgImage="/assets/hospital_page_banner.png"
         statsNumber="3k"
         smallInfo="Hospitals already simplifying critical care"
-        btnText="DOWNLOAD THE APP"
+        btnText="DOWNLOAD THE APP"        
+        bgImageSize="bg-[size:135%_90%] md:bg-[size:75%_111%]"
+        bgPostion="bg-[position:100%_80%] md:bg-[position:100%_0%]"
+        bgHeight="h-[465px] md:h-[550px] lg:h-[650px]"
       />
       <CardUpperEffect />
       <DownloadAppCard
