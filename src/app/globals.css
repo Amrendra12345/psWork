@@ -45,4 +45,7 @@ body {
     transform: translateX(-50%);
   }
 }
+.keen-slider__slide {
+  min-width: 0;
+}
 

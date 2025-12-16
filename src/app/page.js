@@ -8,13 +8,14 @@ import Faq from "@/components/faq/Faq";
 import Growth from "@/components/growth/Growth";
 import Hero from "@/components/hero/Hero";
 import HowToWorks from "@/components/howworks/HowToWorks";
+
 import JoinCommunity from "@/components/joincommunity/JoinCommunity";
 import SelectPlan from "@/components/selectplan/SelectPlan";
 import SmartSupport from "@/components/smartsupport/SmartSupport";
 import StoriesCarousel from "@/components/storiescarousel/StoriesCarousel";
 import TotalStats from "@/components/totalstats/TotalStats";
 import UserGallery from "@/components/usergallery/UserGallery";
-import UserTest from "@/components/usertestimonials/UserTest";
+
 
 import React from "react";
 const Home = () => {

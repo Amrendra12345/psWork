@@ -83,17 +83,24 @@ const Navigation = () => {
           </button>
         </div>
 
-        {navLinks.map((link) => (
+        {navLinks.map((link) => (           
+
           <li
             key={link.name}
-            className="relative border-b border-[var(--main-primary-text-color)] md:border-b-0"
+            className={`relative md:border-b-0
+                ${
+                link.submenu && activeDropdown === link.name
+                    ? "border-b-0"
+                    : "border-b border-[var(--main-primary-text-color)]"
+                }
+            `}
           >
             {/* If no submenu, render normally */}
             {!link.submenu ? (
               <Link
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className=" block
+                className={`block
                     text-[color:var(--main-primary-text-color,#0f172a)]
                     md:text-white
                     px-[5px] 
@@ -104,9 +111,16 @@ const Navigation = () => {
                     hover:bg-[var(--main-theme-background)]
                     hover:text-white
                     transition-all
-                    border-b border-transparent hover:border-b-white/50"
+                    border-b border-transparent hover:border-b-white/50
+                        ${
+                      link.submenu && activeDropdown === link.name
+                    ? "border-b-0"
+                    : "border-b border-[var(--main-primary-text-color)]"
+                }
+                    `}
               >
                 {link.name}
+               
               </Link>
             ) : (
               <>
@@ -119,12 +133,14 @@ const Navigation = () => {
                     text-[18px] md:text-white cursor-pointer font-medium"
                 >
                   {link.name}
-                  <ChevronDown size={22} />
+                  <ChevronDown size={22} className={`transition-transform ${
+                        activeDropdown === link.name ? "rotate-180" : ""
+                    }`}/>
                 </button>
 
                 {/* Submenu */}
                 <ul
-                  className={`mt-0 mb-[-1px] md:mb-0 md:mt-2 lg:w-[200px] flex flex-col gap-0 md:gap-2 md:absolute md:top-[50px] md:left-0 bg-[var(--main-theme-background)] md:bg-white md:shadow-md p-0 md:p-0 ${
+                  className={`mt-0 mb-[-1px] md:mb-0 md:mt-2 lg:w-[150px] flex flex-col gap-0 md:gap-2 md:absolute md:top-[50px] md:left-0 bg-[var(--main-theme-background)] md:bg-white md:shadow-2xl rounded-4 z-30 p-0 md:p-0 ${
                     activeDropdown === link.name ? "block" : "hidden"
                   }`}
                 >

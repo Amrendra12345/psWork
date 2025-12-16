@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link"; 
+import CountUp from "react-countup";
+import UserGally from "./UserGally";
 
 const members = [
   { id: 1, name: "George M", role: "Doctor", image: "/assets/profile1.png" },
@@ -27,23 +29,23 @@ const rowCount = Math.ceil(members.length / cardsPerRow);
 const JoinCommunity = () => {
   return (
     <section className="pb-10 md:pb-16">
-      <div className="px-5">
+      <div className="px-5 overflow-hidden">
         <div className="text-center mb-0 md:mb-10">
           <h4 className="text-[var(--main-primary-text-color)] text-2xl mb-6">
             We have More Than
           </h4>
-          <h3 className="text-[var(--main-primary-text-color)] font-epilogue font-medium text-6xl md:text-9xl mb-3">
-            12,068
+          <h3 className="text-[var(--main-primary-text-color)] font-epilogue font-medium text-6xl md:text-9xl mb-3">            
+            <CountUp end={ 12068} enableScrollSpy scrollSpyOnce />
           </h3>
           <p className="text-[var(--main-primary-text-color)]">Active Users</p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-6 px-5">
+        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-6 px-5">
         {members.map((member) => (
           <div
             key={member.id}
             className="bg-white rounded-xl shadow-md p-4 text-center hover:shadow-lg transition flex flex-col items-center md:items-start md:flex-row gap-4 md:rounded-full"
           >
-            <div className="w-16 h-16 overflow-hidden rounded-full border p-1 flex items-center md:justify-start justify-center mx-auto border-red-500">
+            <div className="w-16 h-16 overflow-hidden rounded-full border p-1 flex items-center md:justify-start justify-center mx-auto border-gray-200">
                 <Image
                     className="rounded-full object-cover aspect-square"
                     src={member.image}
@@ -63,8 +65,12 @@ const JoinCommunity = () => {
           </div>
         ))}
        </div>
-        <Link className='flex justify-center bg-[var(--main-theme-background)] mt-10 pt-3 pb-2 w-72 md:w-96 mx-auto font-epilogue rounded-full text-white' href="/">JOIN THE COMMUNITY</Link>
+       <div className="md:hidden mt-6">
+         <UserGally />
+       </div>
+        <Link className='flex justify-center bg-[var(--main-theme-background)] mt-24 md:mt-10 pt-3 pb-2 w-72 md:w-96 mx-auto font-epilogue rounded-full text-white' href="/">JOIN THE COMMUNITY</Link>
       </div>
+      
     </section>
   );
 };
