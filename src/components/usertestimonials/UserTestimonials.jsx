@@ -13,7 +13,7 @@ const UserTestimonials = () => {
     <div className="user-testimonials">
       {/* Cards */}
       <div className="relative hidden md:block">
-        <div className="min-h-auto xl:min-h-[850px] flex flex-row xl:flex-row gap-4">
+        <div className="min-h-auto xl:min-h-200 flex flex-row xl:flex-row gap-4">
             <div className="w-full xl:w-1/3 flex flex-col md:flex-row xl:flex-col md:justify-between xl:justify-center items-end gap-4">
                 <div
                     onClick={() => openModal("VGUwYrAVIJ4")}

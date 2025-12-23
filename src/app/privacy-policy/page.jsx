@@ -1,99 +1,106 @@
 import CardUpperEffect from "@/components/cardUpperEffect/CardUpperEffect";
+import NeedAndSupport from "@/components/needAndSupport/NeedAndSupport";
 import Image from "next/image";
-import React from "react";
 
-const page = () => {
+const PrivacyPolicy = () => {
   return (
     <>
-      <div className="w-full h-40 md:h-80 relative">
-        <Image
-          src="/assets/privacy_banner.png"
-          fill
-          priority
-          className="w-full h-full object-cover"
-          alt="image"
-        />
+      <div className="w-full px-4 py-10 bg-(--main-theme-background) h-90 md:h-130 relative flex items-center justify-center">
+        <h1 className="text-3xl leading-11 sm:text-[28px]  md:text-4xl sm:leading-10 md:leading-12  md:pt-10 lg:text-5xl lg:leading-16 text-[#FFE8DD] px-1 font-bold font-epilogue z-20">
+          Privacy Policy
+        </h1>
+
+        <div className="w-155 h-90 absolute bottom-0 left-1/2 transform -translate-x-1/2 overflow-hidden z-0">
+          <Image
+            src="/assets/hero_icon.png"
+            alt="Privacy Policy"
+            width={400}
+            height={450}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
       <CardUpperEffect />
-      <section className="px-5 pt-0 pb-10 md:pb-16">
-        <div className="max-w-[var(--max-width)] mx-auto">
-          <h2 className="text-[var(--main-primary-text-color)] font-epilogue text-4xl md:text-6xl font-semibold text-center px-4 sm:px-10 md:px-20 lg:px-60 pb-5">
-            Privacy Policy
-          </h2>
-          <p className="text-[var(--secondary-text-color)] text-center mb-2 text-sm">
-            Effective Date: [Insert Date]
-          </p>
-          <p className="w-full md:w-[80%] mx-auto text-[var(--secondary-text-color)] font-normal text-center text-lg mb-16">
-            At icanheal, your privacy is important to us. This Privacy Policy
-            outlines how we collect, use, protect, and disclose your personal
-            information when you use our website and services.
-          </p>
-          <div className="flex items-start flex-col md:flex-row gap-5 justify-between border-b border-[#e3e3e3] pb-5 md:pb-10">
-            <div className="w-full md:w-[49%]">
-              <span className="text-[var(--secondary-text-color)] inline-block mb-2">
-                1. Information We Collect
-              </span>
-              <p className="text-[var(--main-primary-text-color)] font-epilogue text-2xl md:text-3xl lg:text-6xl md:leading-normal lg:leading-[64px] font-semibold pb-5 pt-2">
-                We may collect the following types of information:
-              </p>
-            </div>
-            <div className="w-full md:w-[42%]">
-              <ul className="list-disc pl-5">
-                <li className="text-[var(--secondary-text-color)] mb-10">
-                  Personal Information: Name, email address, phone number,
-                  gender, date of birth, and other details you provide during
-                  registration or communication.
-                </li>
-                <li className="text-[var(--secondary-text-color)] mb-10">
-                  Health-Related Information: Medical history, treatment
-                  details, prescriptions, diagnosis, and health documents you
-                  choose to share.
-                </li>
-                <li className="text-[var(--secondary-text-color)] mb-10">
-                  Usage Data: IP address, browser type, operating system, device
-                  information, pages visited, and access times.
-                </li>
-              </ul>
-            </div>
+      <section>
+      <div className="w-full md:max-w-4xl mx-auto px-4 py-6">
+        <p className="text-(--main-primary-text-color)/70 text-center">
+          Effective Date: [Insert Date]
+        </p>
+        <p className="mt-2 text-lg text-(--secondary-text-color)">
+          At icanheal, your privacy is important to us. This Privacy Policy
+          outlines how we collect, use, protect, and disclose your personal
+          information when you use our website and services.
+        </p>
+      </div>
+      <div className="w-full md:max-w-6xl mx-auto px-4 py-6">
+        <div className="w-full flex justify-between items-start gap-6 flex-col md:flex-row px-6 md:px-2">
+          <div className="w-full md:w-[45%]">
+            <p className="text-(--secondary-text-color)">
+              1. Information We Collect
+            </p>
+            <h2 className="text-2xl md:text-3xl text-(--main-primary-text-color)/95 font-poppins font-bold">
+              We may collect the following types of information:
+            </h2>
           </div>
-          <div className="flex items-start flex-col md:flex-row gap-5 justify-between pt-10 md:pt-16 border-b border-[#e3e3e3] pb-0 md:pb-12">
-            <div className="w-full md:w-[49%]">
-              <span className="text-[var(--secondary-text-color)] inline-block mb-2">
-                2. How We Use Your Information
-              </span>
-              <p className="text-[var(--main-primary-text-color)] font-epilogue text-2xl md:text-3xl lg:text-6xl md:leading-normal lg:leading-[64px] font-semibold pb-5 pt-2">
-                We use your information to:
-              </p>
-            </div>
-            <div className="w-full md:w-[42%]">
-              <ul className="list-disc pl-5">
-                <li className="text-[var(--secondary-text-color)] mb-10">
-                  Provide and personalize services based on your role (patient,
+          <div className="w-full md:w-[45%]">
+            <ol className="list-disc">
+              <li className="text-(--secondary-text-color) mb-5">
+                Personal Information: Name, email address, phone number, gender,
+                date of birth, and other details you provide during registration
+                or communication.
+              </li>
+              <li className="text-(--secondary-text-color) mb-5">
+                Health-Related Information: Medical history, treatment details,
+                prescriptions, diagnosis, and health documents you choose to
+                share.
+              </li>
+              <li className="text-(--secondary-text-color) mb-5">
+                Usage Data: IP address, browser type, operating system, device
+                information, pages visited, and access times.
+              </li>
+            </ol>
+          </div>
+        </div>
+        <hr className="border-gray-300 mt-8 mb-12"/>
+        <div className="w-full flex justify-between items-start gap-6 flex-col md:flex-row px-6 md:px-2">
+          <div className="w-full md:w-[45%]">
+            <p className="text-(--secondary-text-color)">
+              2. How We Use Your Information
+            </p>
+            <h2 className="text-2xl md:text-3xl text-(--main-primary-text-color)/95 font-poppins font-bold">
+              We use your information to:
+            </h2>
+          </div>
+          <div className="w-full md:w-[45%]">
+            <ol className="list-disc">
+              <li className="text-(--secondary-text-color) mb-5">
+                Provide and personalize services based on your role (patient,
                   caregiver, doctor, hospital)
-                </li>
-                <li className="text-[var(--secondary-text-color)] mb-10">
+              </li>
+               <li className="text-(--secondary-text-color) mb-5">
                   Connect you with relevant support programs (PAP, FAS, VAS)
                 </li>
-                <li className="text-[var(--secondary-text-color)] mb-10">
+                <li className="text-(--secondary-text-color) mb-5">
                   Facilitate teleconsultations and document sharing
                 </li>
-                <li className="text-[var(--secondary-text-color)] mb-10">
+                <li className="text-(--secondary-text-color) mb-5">
                   Improve our platform, content, and user experience
                 </li>
 
-                <li className="text-[var(--secondary-text-color)] mb-10">
+                <li className="text-(--secondary-text-color) mb-5">
                   Communicate updates, offers, or important service messages
                 </li>
-                <li className="text-[var(--secondary-text-color)] mb-10">
+                <li className="text-(--secondary-text-color) mb-5">
                   Comply with legal and regulatory requirements
                 </li>
-              </ul>
-            </div>
+            </ol>
           </div>
         </div>
+      </div>
       </section>
+      <NeedAndSupport/>
     </>
   );
 };
 
-export default page;
+export default PrivacyPolicy;

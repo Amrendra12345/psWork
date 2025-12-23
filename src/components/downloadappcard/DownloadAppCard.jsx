@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const DownloadAppCard = ({ valueStats, cardText, btnUrl, btnText }) => {
   return (
-    <div className="bg-[var(--main-theme-background)] relative -top-[35px] w-[93%] mx-auto rounded-3xl p-5 block md:hidden">
+    <div className="bg-(--main-theme-background) relative -top-9 w-[93%] mx-auto rounded-3xl p-5 block md:hidden">
       <div className="flex items-center mb-4">
         <h4 className="text-white text-6xl pr-4">{valueStats}</h4>
         <p className="text-white text-lg">{cardText}</p>

@@ -9,6 +9,7 @@
   --main-theme-background: #1a434e;
   --secondary-theme-backgound: #F3F8F9;
   --main-primary-text-color: #1a434e;
+  --main-theme-button-hover:#132b32;
   --secondary-text-color: #6E6E6E;
   --max-width: 1280px;
 }
@@ -16,13 +17,17 @@
 body {
   font-size: 16px;
   font-family: var(--font-inter);
+  overflow-x: hidden;
+  
 }
-
+@layer utilities{
 .font-epilogue {
   font-family: var(--font-epilogue);
 }
 .font-poppins{
   font-family: var(--font-poppins);
+}
+ 
 }
 
 .bottom-nav svg path {
@@ -47,5 +52,11 @@ body {
 }
 .keen-slider__slide {
   min-width: 0;
+}
+.faq-answer ol {
+  @apply list-disc pl-5 mt-2 space-y-1;
+}
+.faq-answer li {
+  @apply text-[#6E6E6E]  ;
 }
 

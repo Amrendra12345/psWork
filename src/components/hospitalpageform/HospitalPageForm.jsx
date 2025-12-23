@@ -16,15 +16,15 @@ const HospitalPageForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className="p-5 border border-gray-200 rounded">
       <div className="mb-5">
-        <label className="block mb-3 font-medium font-poppins">
+        <label className="block mb-2 font-medium font-poppins text-(">
           Company Name
         </label>
         <input
           type="text"
           {...register("companyName", { required: "Company name is required" })}
-          className="w-full px-4 py-2 bg-[#e4e4e4] rounded-full outline-none"
+          className="w-full px-4 py-4 bg-[#e4e4e4] rounded-full outline-none"
         />
         {errors.companyName && (
           <p className="text-red-500 text-sm">{errors.companyName.message}</p>
@@ -33,7 +33,7 @@ const HospitalPageForm = () => {
 
       <div className="flex flex-col md:flex-row gap-4 mb-5">
         <div className="flex-1">
-          <label className="block mb-3 font-medium font-poppins">Email</label>
+          <label className="block mb-2 font-medium font-poppins">Email</label>
           <input
             type="email"
             {...register("email", {
@@ -43,7 +43,7 @@ const HospitalPageForm = () => {
                 message: "Invalid email address",
               },
             })}
-            className="w-full px-4 py-2 bg-[#e4e4e4] rounded-full outline-none"
+            className="w-full px-4 py-4 bg-[#e4e4e4] rounded-full outline-none"
           />
           {errors.email && (
             <p className="text-red-500 text-sm">{errors.email.message}</p>
@@ -51,7 +51,7 @@ const HospitalPageForm = () => {
         </div>
 
         <div className="flex-1">
-          <label className="block mb-3 font-medium font-poppins">
+          <label className="block mb-2 font-medium font-poppins">
             Phone Number
           </label>
           <input
@@ -63,7 +63,7 @@ const HospitalPageForm = () => {
                 message: "Enter a valid 10-digit number",
               },
             })}
-            className="w-full px-4 py-2 bg-[#e4e4e4] rounded-full outline-none"
+            className="w-full px-4 py-4 bg-[#e4e4e4] rounded-full outline-none"
           />
           {errors.phone && (
             <p className="text-red-500 text-sm">{errors.phone.message}</p>
@@ -72,12 +72,12 @@ const HospitalPageForm = () => {
       </div>
 
       <div className="mb-5">
-        <label className="block mb-3 font-medium font-poppins">Role</label>
+        <label className="block mb-2 font-medium font-poppins">Role</label>
 
         <div className="relative">
           <select
             {...register("role", { required: "Role is required" })}
-            className="w-full px-4 py-2 bg-[#e4e4e4] font-poppins rounded-full outline-none appearance-none cursor-pointer"
+            className="w-full px-4 py-4 bg-[#e4e4e4] font-poppins rounded-full outline-none appearance-none cursor-pointer"
           >
             <option value="">Select a role</option>
             <option value="frontend">Frontend Developer</option>
@@ -109,10 +109,10 @@ const HospitalPageForm = () => {
       </div>
 
       <div className="mb-5">
-        <label className="block mb-3 font-medium font-poppins">Message</label>
+        <label className="block mb-2 font-medium font-poppins">Message</label>
         <textarea
           {...register("message", { required: "Message is required" })}
-          className="w-full px-4 py-2 bg-[#e4e4e4] rounded-xl outline-none"
+          className="w-full px-4 py-4 bg-[#e4e4e4] rounded-xl outline-none"
           rows={4}
         />
         {errors.message && (
@@ -122,7 +122,7 @@ const HospitalPageForm = () => {
 
       <button
         type="submit"
-        className="w-full bg-[var(--main-theme-background)] font-poppins text-white px-6 py-2 rounded-full cursor-pointer"
+        className="w-full bg-(--main-theme-background) text-xl font-poppins text-white px-6 py-4 rounded-full cursor-pointer transition-all duration-300 hover:bg-(--main-theme-background)/80"
       >
         Submit
       </button>

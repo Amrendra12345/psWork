@@ -1,11 +1,10 @@
-import CardCarousel from "@/components/cardcarousel/CardCarousel";
-import CardUpperEffect from "@/components/cardUpperEffect/CardUpperEffect";
-import CareTakercard from "@/components/caretakercard/CareTakercard";
-import DownloadAppCard from "@/components/downloadappcard/DownloadAppCard";
-import Hero from "@/components/hero/Hero";
-import HeroPacients from "@/components/hero/HeroPacients";
-import SmartTools from "@/components/smarttools/SmartTools";
-import React from "react";
+import CardCarousel from '@/components/cardcarousel/CardCarousel'
+import CardUpperEffect from '@/components/cardUpperEffect/CardUpperEffect'
+import CareTakercard from '@/components/caretakercard/CareTakercard';
+import DownloadAppCard from '@/components/downloadappcard/DownloadAppCard'
+import Hero from '@/components/homes/Hero'
+import NeedAndSupport from '@/components/needAndSupport/NeedAndSupport';
+import SmartTools from '@/components/smarttools/SmartTools';
 const offersData = [
   {
     id: 1,
@@ -55,29 +54,30 @@ const offersData = [
     stats: "100+",
   },
 ];
-const page = () => {
+
+const Patients = () => {
   return (
-    <>    
-      <Hero
-        title="From Confusion to Clarity in Critical Care"
-        subtitle="icanheal helps you access high-quality cancer and critical care treatment by simplifying the journey, from financial support to finding the right doctors and communities. All in one unified platform."
-        bgImage="/assets/patient_page_banner.png"
+    <>
+    <Hero 
+        title="“Take Control of Your Treatment Today.”"
+        subtitle="Don't wait for care to come to you. With icanheal, get matched to services, guidance, and tools that put you in charge of your health journey."
         statsNumber="2k"
         smallInfo="Patients already simplifying critical care"
-        btnText="DOWNLOAD THE APP"  
-        bgImageSize="bg-[size:113%_76%] md:bg-[size:75%_100%]"
-        bgPostion="bg-[position:17%_119%] md:bg-[position:124%_0%]"
-        bgHeight="h-[500px] md:h-[550px] lg:h-[650px]"
-       
-        
-      />
-      <CardUpperEffect />
-      <DownloadAppCard
+        btnText="DOWNLOAD THE APP"
+        bgImage="/assets/patient_page_banner.png"
+        bgHeight="h-156 sm:h-120 md:h-130 lg:h-156"
+        bgSize="bg-size-[105%_71%] sm:bg-size-[85%_96%] md:bg-size-[85%_96%] lg:bg-size-[76%_106%]"
+        bgPosition="bg-position-[100%_98%] sm:bg-position-[101%_74%] md:bg-position-[103%_120%] lg:bg-position-[135%_88%]"
+       bgGradient="linear-gradient(274deg, rgba(26, 67, 78, 0) 59%, rgb(26, 67, 78) 94.06%), linear-gradient(
+355deg, rgba(26, 67, 78, 0) 65%, rgb(0, 54, 67) 99%), linear-gradient(13deg, rgba(26, 67, 78, 0) 59%, rgb(26, 67, 78) 94.06%)"
+    />
+     <CardUpperEffect />
+      {/* <DownloadAppCard
         valueStats="2k"
         cardText="Patients already simplifying critical care"
         btnUrl="/"
         btnText="DOWNLOAD THE APP"
-      />
+      /> */}
       <CardCarousel
         cards={offersData}
         sectionTitle="What we offer?"
@@ -85,10 +85,12 @@ const page = () => {
         bgColor="#ffffff"
         withBg={false}
       />
-      <SmartTools />
+       <SmartTools />
       <CareTakercard />
-    </>
-  );
-};
+      <NeedAndSupport/>
+     </>
 
-export default page;
+  )
+}
+
+export default Patients

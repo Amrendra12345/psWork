@@ -50,39 +50,33 @@ const cards = [
 const ServicesInclude = () => {
   return (
     <section className="px-5 pt-2 pb-10 md:pb-16">
-      <div className="max-w-[var(--max-width)] mx-auto">
-        <h2 className="font-epilogue text-center font-semibold text-3xl md:text-6xl text-[var(--main-primary-text-color)] mb-8 md:mb-16">
+      <div className="max-w-(--max-width) mx-auto">
+        <h2 className="font-epilogue text-center font-semibold text-3xl md:text-4xl text-(--main-primary-text-color) mb-8 md:mb-10">
           Services Include:
         </h2>
 
-        <div className="flex flex-col md:flex-row flex-wrap justify-between gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map(({ id, title, bg, icon, linkUrl }) => (
-            <Link
-              key={id}
-              href={linkUrl}
-              className="w-full md:w-[48%] lg:w-[32%] min-h-[500px] p-8 shadow-[0_0_20px_rgba(0,0,0,0.1)] rounded-3xl bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${bg})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              <div className="flex items-start justify-between">
-                <h3 className=" md:w-[210px] font-epilogue text-2xl text-[var(--main-primary-text-color)]">
-                  {title}
-                </h3>
-
-                <span className="mb-16 inline-flex justify-center w-10 h-10 bg-[var(--main-theme-background)] rounded-full px-2">
-                  <Image
-                    src={icon}
-                    alt={`${title} icon`}
-                    width={32}
-                    height={32}
-                  />
-                </span>
-              </div>
-            </Link>
+             <div key={id} className="min-h-100  border border-gray-200 flex-wrap relative rounded-2xl shadow-2xl">
+              <Link href={linkUrl} className="block group">                 
+                  <div className="w-full h-full">
+                     <Image src={bg} alt={title} width={400} height={300} className="w-full h-full  object-contain group-hover:scale-105 transition-transform duration-300 ease-in-out rounded-2xl"/>
+                  </div>
+                  <div className="absolute top-0 bottom-0 h-full w-full bg-black/0 rounded-2xl">
+                    <div className="p-4 flex justify-between items-center">
+                      <h1 className="text-2xl font-bold font-popping text-(--main-primary-text-color)">{title}</h1>
+                      <div className=" w-10 h-10 bg-(--main-theme-background) rounded-full p-2 flex items-center justify-center ">
+                      <Image
+                          src={icon}
+                          alt={`${title} icon`}
+                          width={32}
+                          height={32}
+                        />
+                        </div>
+                    </div>
+                  </div>
+              </Link>
+             </div>
           ))}
         </div>
       </div>

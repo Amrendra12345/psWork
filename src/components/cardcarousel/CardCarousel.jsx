@@ -1,17 +1,18 @@
 "use client";
+import 'keen-slider/keen-slider.min.css'
+import KeenSlider from 'keen-slider'
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import Link from "next/link";
 import {CircleChevronLeft,CircleChevronRight} from "lucide-react"
-// Default Card Data
 const defaultCards = [
   {
     id: 1,
     type: "standard",
     title: "Support Services",
     description:
-      "Explore our flexible financing options designed to meet your unique needs. We’re here to help you find the perfect solution for your budget.",
+      "Explore our flexible financing options designed to meet your unique needs. We're here to help you find the perfect solution for your budget.",
     buttonText: "Explore",
     buttonUrl: "/",
     icon: "/assets/heart-add.svg",
@@ -59,36 +60,33 @@ const defaultCards = [
   },
 ];
 
-const CardCarousel = ({
+const CardCarousel = ({ 
   sectionTitle = "Your Section Title",
   sectionExtraTitle,
   cards = defaultCards,
   bgColor = "#F3F8F9",
-  withBg = true
-}) => {
-  const [sliderInstance, setSliderInstance] = useState(null);
+  withBg = true}) => {
+      const [sliderInstance, setSliderInstance] = useState(null);
 
 const [sliderRef] = useKeenSlider({
   loop: true,
   slides: {
-    perView: 1.25, // show 1 full + partial sides
+    perView: 1, // show 1 full + partial sides
     spacing: 15,
     origin: "center", // centers the active slide
   },
   breakpoints: {
     "(min-width: 640px)": {
-      slides: { perView: 2.2, spacing: 20, origin: "center" },
+      slides: { perView: 2, spacing: 20, origin: "center" },
     },
     "(min-width: 1024px)": {
-      slides: { perView: 2.8, spacing: 20, origin: "center" },
+      slides: { perView: 3, spacing: 20, origin: "center" },
     },
   },
   created(slider) {
     setSliderInstance(slider);
   },
 });
-
-
   const handlePrev = () => {
     sliderInstance?.prev();
   };
@@ -96,16 +94,15 @@ const [sliderRef] = useKeenSlider({
   const handleNext = () => {
     sliderInstance?.next();
   };
-
   return (
-    <section className="relative overflow-hidden pt-0 pb-10 md:pb-16">
-      <div style={{ backgroundColor: bgColor }} className={`${withBg? 'pt-10 md:pt-14 pb-8 md:pb-10' : ''} `}>
-        {sectionExtraTitle && <p className="pb-2 text-[var(--secondary-text-color)] font-epilogue text-3xl text-center font-medium">{sectionExtraTitle}</p>}
-        <h2 className="font-epilogue text-3xl md:text-6xl text-center font-semibold text-[var(--main-primary-text-color)] pb-0 px-5 w-full md:w-[830px] md:mx-auto  leading-normal md:leading-20">
+      <section className="relative overflow-hidden pt-0 pb-10 md:pb-16 ">
+           <div style={{ backgroundColor: bgColor }} className={`${withBg? 'pt-10 md:pt-14 pb-8 md:pb-10' : ''} `}>
+        {sectionExtraTitle && <p className="pb-2 text-(--secondary-text-color) font-epilogue text-3xl text-center font-medium">{sectionExtraTitle}</p>}
+        <h2 className="w-full text-center font-epilogue font-bold text-3xl md:text-4xl md:leading-12 lg:leading-20 mb-8 md:mb-8 text-(--main-primary-text-color)">
           {sectionTitle}
         </h2>
-
-        <div ref={sliderRef} className="keen-slider pt-12 pb-20">
+        <div className='px-4 sm:px-10'>
+         <div ref={sliderRef} className="keen-slider pt-3 pb-20">
           {cards.map((card) => (
             <div
               key={card.id}
@@ -197,9 +194,10 @@ const [sliderRef] = useKeenSlider({
             </button>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+        </div>
+        </div>
+      </section>
+  )
+}
 
-export default CardCarousel;
+export default CardCarousel

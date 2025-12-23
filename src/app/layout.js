@@ -1,11 +1,11 @@
-import Header from "@/components/header/Header";
-import "./globals.css";
 import { Inter, Epilogue, Poppins } from "next/font/google";
-import Footer from "@/components/footer/Footer";
+import "./globals.css";
+import Header from "@/components/layouts/header/Header";
+import Footer from "@/components/layouts/footer/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["200","300","400", "500", "600", "700"],
+  weight: ["200", "300", "400", "500", "600", "700"],
   display: "swap",
   variable: "--font-inter",
 });
@@ -25,23 +25,17 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "ICanHeal",
+  title: "icanheal",
   description: "This is my website description",
-  icons: [
-    { url: "/favicon.png", type: "image/png", sizes: "32x32" },
-  ],
+  // icons: [{ url: "/favicon.png", type: "image/png", sizes: "32x32" }],
 };
-
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${epilogue.variable} ${poppins.variable}`}
-    >
+    <html lang="en" className={`${inter.variable} ${epilogue.variable} ${poppins.variable} antialiased`}>
       <body>
-        <Header />
+        <Header/>
         {children}
-        <Footer />
+        <Footer/>
       </body>
     </html>
   );

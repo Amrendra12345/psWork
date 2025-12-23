@@ -10,14 +10,14 @@ export default function UserGally() {
     loop: true,
     slides: {
       perView: 2,
-      spacing: 15,
+      spacing: 10,
     },
     breakpoints: {
       "(min-width: 768px)": {
         slides: { perView: 2, spacing: 10 },
       },
       "(min-width: 1024px)": {
-        slides: { perView: 2, spacing: 24 },
+        slides: { perView: 2, spacing: 10 },
       },
     },
   });
@@ -30,7 +30,7 @@ export default function UserGally() {
     slider.current?.next();
   };
 
-  const members = [
+  const members = [    
   { id: 1, name: "George M", role: "Doctor", image: "/assets/profile1.png" },
   { id: 2, name: "Anna L", role: "Nurse", image: "/assets/profile2.png" },
   { id: 3, name: "John D", role: "Therapist", image: "/assets/profile3.png" },
@@ -51,7 +51,7 @@ export default function UserGally() {
   return (
     <div className="relative">
       {/* Slider */}
-      <div ref={sliderRef} className="keen-slider me-4 px-4 ms-4">
+      <div ref={sliderRef} className="keen-slider">
         {members.map((member) => (
           <div
             key={member.id}
@@ -67,7 +67,7 @@ export default function UserGally() {
                     />
               </div>
             <div className="w-3/4 flex justify-start flex-col md:items-start items-center">
-                <h3 className="text-lg font-normal text-[var(--main-primary-text-color)] whitespace-nowrap">
+                <h3 className="text-lg font-normal text-(--main-primary-text-color) whitespace-nowrap">
                 {member.name}
                 </h3>
                 <p className="text-[15px] font-medium text-[#6E6E6E]">
@@ -79,12 +79,12 @@ export default function UserGally() {
       </div>
 
       {/* Navigation */}
-      <div className="absolute bottom-[-60px] left-1/2 -translate-x-1/2 flex gap-4 z-20">
+      <div className="absolute -bottom-15 left-1/2 -translate-x-1/2 flex gap-4 z-20">
         <button onClick={handlePrev}>
-          <CircleChevronLeft className="bg-[var(--main-theme-background)] text-white rounded-full w-10 h-10" />
+          <CircleChevronLeft className="bg-(--main-theme-background) text-white rounded-full w-10 h-10" />
         </button>
         <button onClick={handleNext}>
-          <CircleChevronRight className="bg-[var(--main-theme-background)] text-white rounded-full w-10 h-10" />
+          <CircleChevronRight className="bg-(--main-theme-background) text-white rounded-full w-10 h-10" />
         </button>
       </div>
     </div>

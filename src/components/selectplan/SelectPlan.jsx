@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaUser } from "react-icons/fa";
 
 const SelectPlan = () => {
   const bgOne = {
@@ -16,98 +18,82 @@ const SelectPlan = () => {
   };
   return (
     <>
-  
-    
-    <section className="px-5 pt-0 pb-10 md:pb-16">
-        <div className="max-w-[var(--max-width)] mx-auto">
-          <h2 className="font-epilogue font-semibold text-2xl md:text-4xl text-center text-[var(--main-primary-text-color)] mb-8 md:mb-12">
-           Select Your Journey
-         </h2>
-         <div className="flex items-center justify-between gap-4 flex-col md:flex-row lg:flex-row">
-          <div
-            className="w-full md:w-[48%] lg:w-[48%] flex flex-col justify-end min-h-[550px] md:min-h-[650px] relative overflow-hidden p-5 md:p-7 pb-5 rounded-4xl bg-[var(--main-theme-background)]"
-            style={bgOne}
-            >
-  {/* Gradient overlay */}
-                <div
-                    className="
-                    absolute inset-0 z-10
-                    h-3/4
-                    top-[25%]
-                    bg-gradient-to-b
-                    from-[#22495414]
-                    via-[#224954]
-                    to-[#224954]
-                    "
+       <section className="px-5 pt-0 pb-10 md:pb-16 mt-34 sm:mt-0">
+        <div className="max-w-(--max-width) mx-auto">
+            <h2
+            className="w-full text-center font-epilogue font-bold text-3xl md:text-4xl md:leading-12    lg:leading-20 mb-8 md:mb-12 text-(--main-primary-text-color)" >
+            Select Your Journey
+          </h2>
+          <div className="flex flex-col sm:flex-row  w-full md:justify-around items-center gap-x-2 md:gap-x-5 md:w-4/5 mx-auto">
+            <div className="bg-(--main-theme-background) rounded-2xl overflow-hidden mb-8">
+              <div className="">
+                <Image
+                  src={"/assets/bg_plan_one (1).png"}
+                  width={500}
+                  height={500}
+                  alt="select_plan_img"
+                  className="w-full h-auto"
                 />
-
-             <div className="relative z-10 mt-[240px] md:mt-0">
-              <h3 className="text-white font-epilogue text-[20px] md:text-4xl mb-1 font-semibold">
-                Plan care, Cut costs, Feel supported
-              </h3>
-              <p className="text-white text-sm text-[16px] mb-5 font-light">
-                Discover a supportive community that guides you through the
-                complexities of cancer care. Access resources, expert advice,
-                and emotional support tailored to your journey.
-              </p>
-              <Link
-                className="flex justify-center items-center bg-white w-full p-3 md:p-5 rounded-full gap-2 font-epilogue text-3xl text-[var(--main-primary-text-color)]/40"
-                href="/patients"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="35"
-                  height="35"
-                  viewBox="0 0 35 35"
-                  fill="none"
+              </div>
+                <div className="relative p-4">
+                <h3 className="text-white font-epilogue text-2xl sm:xl sm:leading-8 md:text-3xl mb-1 font-semibold leading-10 md:leading-10">
+                  Plan care, Cut costs, Feel supported
+                </h3>
+                <p className="text-white text-sm  mb-5 sm:mb-10 md:mb-5 font-poppins leading-6 font-[17px] ">
+                  Discover a supportive community that guides you through the
+                  complexities of cancer care. Access resources, expert advice,
+                  and emotional support tailored to your journey.
+                </p>
+                <Link
+                  className="flex justify-center items-center bg-white w-full p-3 md:p-5 rounded-full gap-2 font-epilogue text-3xl text-(--main-primary-text-color)"
+                  href="/patients"
                 >
-                  <path
-                    d="M17.5001 2.91663C13.6792 2.91663 10.573 6.02288 10.573 9.84371C10.573 13.5916 13.5042 16.625 17.3251 16.7562C17.4417 16.7416 17.5584 16.7416 17.6459 16.7562C17.6751 16.7562 17.6897 16.7562 17.7188 16.7562C17.7334 16.7562 17.7334 16.7562 17.748 16.7562C21.4813 16.625 24.4126 13.5916 24.4272 9.84371C24.4272 6.02288 21.3209 2.91663 17.5001 2.91663Z"
-                    fill="#1A434E"
-                  />
-                  <path
-                    d="M24.9084 20.6354C20.8396 17.9229 14.2042 17.9229 10.1063 20.6354C8.25423 21.875 7.2334 23.5521 7.2334 25.3459C7.2334 27.1396 8.25423 28.8021 10.0917 30.0271C12.1334 31.398 14.8167 32.0834 17.5001 32.0834C20.1834 32.0834 22.8667 31.398 24.9084 30.0271C26.7459 28.7875 27.7667 27.125 27.7667 25.3167C27.7522 23.523 26.7459 21.8604 24.9084 20.6354Z"
-                    fill="#1A434E"
-                  />
-                </svg>
-                <span className="mb-[-6px] font-epilogue text-sm md:text-3xl text-[var(--main-primary-text-color)]">
-                  Patients
-                </span>
-              </Link>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="35"
+                    viewBox="0 0 35 35"
+                    fill="none"
+                  >
+                    <path
+                      d="M17.5001 2.91663C13.6792 2.91663 10.573 6.02288 10.573 9.84371C10.573 13.5916 13.5042 16.625 17.3251 16.7562C17.4417 16.7416 17.5584 16.7416 17.6459 16.7562C17.6751 16.7562 17.6897 16.7562 17.7188 16.7562C17.7334 16.7562 17.7334 16.7562 17.748 16.7562C21.4813 16.625 24.4126 13.5916 24.4272 9.84371C24.4272 6.02288 21.3209 2.91663 17.5001 2.91663Z"
+                      fill="#1A434E"
+                    />
+                    <path
+                      d="M24.9084 20.6354C20.8396 17.9229 14.2042 17.9229 10.1063 20.6354C8.25423 21.875 7.2334 23.5521 7.2334 25.3459C7.2334 27.1396 8.25423 28.8021 10.0917 30.0271C12.1334 31.398 14.8167 32.0834 17.5001 32.0834C20.1834 32.0834 22.8667 31.398 24.9084 30.0271C26.7459 28.7875 27.7667 27.125 27.7667 25.3167C27.7522 23.523 26.7459 21.8604 24.9084 20.6354Z"
+                      fill="#1A434E"
+                    />
+                  </svg>
+                  <span className="-mb-1.5 font-epilogue text-sm md:text-3xl text-(--main-primary-text-color)">
+                    Patients
+                  </span>
+                </Link>
+              </div>
             </div>
-          </div>
-
-            <div
-            className="w-full md:w-[48%] lg:w-[48%] flex flex-col justify-end min-h-[550px] md:min-h-[650px] relative overflow-hidden p-5 md:p-7 pb-5 rounded-4xl bg-[var(--main-theme-background)]"
-            style={bgTwo}
-            >
-  {/* Gradient overlay */}
-                <div
-                    className="
-                    absolute inset-0 z-10
-                    h-3/4
-                    top-[25%]
-                    bg-gradient-to-b
-                    from-[#22495414]
-                    via-[#224954f8]
-                    to-[#224954]
-                    "
+            <div className="bg-(--main-theme-background) rounded-2xl overflow-hidden mb-8">
+              <div className="">
+                <Image
+                  src={"/assets/bg_plan_two.png"}
+                  width={500}
+                  height={500}
+                  alt="select_plan_img"
+                  className="w-full h-auto"
                 />
-
-            <div className="relative z-10">
-              <h3 className="text-white font-epilogue text-[20px] md:text-4xl mb-1 font-semibold">
-                Refer fast See, AI summaries, Stay connected
-              </h3>
-              <p className="text-white text-sm md:text-[16px] mb-5 font-light">
-                Discover a supportive community that guides you through the
-                complexities of cancer care. Access resources, expert advice,
-                and emotional support tailored to your journey.
-              </p>
-              <Link
-                className="flex items-center justify-center bg-white w-full p-3 md:p-5 rounded-full gap-2"
-                href="/doctors"
-              >
-                <svg
+              </div>
+                <div className="relative p-4">
+                <h3 className="text-white font-epilogue text-2xl sm:xl sm:leading-8 md:text-3xl mb-1 font-semibold leading-10 md:leading-10">
+                  Refer fast See, AI summaries, Stay connected
+                </h3>
+                <p className="text-white text-sm  mb-5 sm:mb-10 md:mb-5 font-poppins leading-6 font-[17px] ">
+                  Discover a supportive community that guides you through the
+                  complexities of cancer care. Access resources, expert advice,
+                  and emotional support tailored to your journey.
+                </p>
+                <Link
+                  className="flex justify-center items-center bg-white w-full p-3 md:p-5 rounded-full gap-2 font-epilogue text-3xl text-(--main-primary-text-color)"
+                  href="/patients"
+                >
+                  <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="36"
                   height="35"
@@ -123,17 +109,16 @@ const SelectPlan = () => {
                     fill="#1A434E"
                   />
                 </svg>
-                <span className="mb-[-6px] font-epilogue text-sm md:text-3xl text-[var(--main-primary-text-color)]">
-                  Doctors
-                </span>
-              </Link>
+                  <span className="-mb-1.5 font-epilogue text-sm md:text-3xl text-(--main-primary-text-color)">
+                    Doctors
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
-
-          </div>
-       </div>
-
-    </section>
+        </div>
+      </section>
+      
     </>
   );
 };

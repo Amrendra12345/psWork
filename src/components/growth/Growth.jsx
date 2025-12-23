@@ -9,7 +9,7 @@ const Growth = () => {
         <div className="flex items-center justify-between flex-col md:flex-row gap-5">
           <div className="w-full md:w-1/2">
             <h4 className="w-auto md:w-[440px] text-[var(--main-primary-text-color)] text-3xl md:text-5xl mb-6 md:mb-12 font-semibold leading-10 md:leading-14">
-              empowering every cancer journey
+              Empowering every cancer journey
             </h4>
             <p className="text-[#6E6E6E] mb-6 md:mb-10">
               Providing strength, support, and knowledge at every step—from

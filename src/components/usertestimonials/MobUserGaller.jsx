@@ -39,7 +39,7 @@ export default function MobUserGaller() {
     <div className="relative">
       <div ref={sliderRef} className="keen-slider flex justify-between items-center">
              <div className="keen-slider__slide px-6">
-                <div className="min-h-[145px] flex gap-4">
+                <div className="min-h-55 flex gap-4">
                      <div
                         onClick={() => openModal("VGUwYrAVIJ4")}
                         className="w-full h-auto relative cursor-pointer rounded-lg bg-[url('/assets/preview_thumb.png')] bg-cover bg-no-repeat bg-center aspect-video overflow-hidden"
@@ -73,7 +73,7 @@ export default function MobUserGaller() {
                 </div>                 
              </div>
              <div className="keen-slider__slide px-6">
-                <div className="min-h-[145px] flex gap-4">
+                <div className="min-h-55 flex gap-4">
                      <div
                         onClick={() => openModal("yZgwW6Yuc_E")}
                         className="w-full h-auto relative cursor-pointer rounded-lg bg-[url('/assets/preview_thumb.png')] bg-cover bg-no-repeat bg-center aspect-video overflow-hidden"
@@ -108,7 +108,7 @@ export default function MobUserGaller() {
                   </div>
              </div> 
               <div className="keen-slider__slide px-6">
-                <div className="min-h-[145px] flex gap-4">
+                <div className="min-h-55 flex gap-4">
                      <div
                         onClick={() => openModal("yZgwW6Yuc_E")}
                         className="w-full h-auto relative cursor-pointer rounded-lg bg-[url('/assets/preview_thumb.png')] bg-cover bg-no-repeat bg-center aspect-video overflow-hidden"
