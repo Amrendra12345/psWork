@@ -1,65 +1,76 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { FaNotesMedical } from "react-icons/fa";
+import { GiMedicines } from "react-icons/gi";
+import { LuAlarmClockPlus } from "react-icons/lu";
+import { MdMedicalServices } from "react-icons/md";
 
-const SmartTools = ({ withMargin = true }) => {
+const SmartTools = () => {
   return (
-    <section
-      className={`${
-        withMargin ? "mb-10 md:mb-16" : ""
-      } bg-(--main-theme-background) py-7 md:py-14 px-6`}
-    >
-        <div className="max-w-(--max-width) mx-auto">
-          <div className="flex flex-col md:flex-row gap-4 justify-between mb-10 md:ml-22 items-center">
-            <h4 className="text-white font-popping text-3xl md:text-4xl font-semibold md:max-w-1/4 leading-12"> Smart Tools Just for You:</h4>
-            <Link className="bg-white py-5 px-7 rounded-4xl font-semibold mb-10 md:mr-22" href="/">
-              LET'S NAVIGATE THIS TOGETHER
-            </Link>
+    <section className="bg-(--main-theme-background) py-6 w-full">
+      <div className="max-w-7xl mx-auto">
+        <p className="w-full text-center font-epilogue font-semibold text-3xl md:text-4xl mb-2 text-gray-200">
+          Smart Tools That Simplify Care
+        </p>
+        <p className="font-poppins text-lg text-center font-normal text-gray-300">
+          Track, manage & simplify care with our digital tools
+        </p>
+        <div className="mt-8 flex justify-start items-center gap-5 w-full">
+          <div className="w-1/4 min-h-48 py-4 bg-white rounded">
+            <div className="w-full flex justify-center items-center mb-5">
+              <div className="w-16 h-16 flex justify-center items-center rounded-full p-1 bg-(--main-theme-background)">
+                <FaNotesMedical className="text-4xl text-white" />
+              </div>
+            </div>
+            <p className="text-(--main-primary-text-color) font-bold text-lg text-center mb-2">
+              Report Summary
+            </p>
+
+            <p className="text-(--main-primary-text-color) font-semibold text-sm text-center">
+              Consolidate medical reports in one place
+            </p>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 justify-around">
-            <div className="md:w-2/5  h-full md:p-4">
-              <div className="bg-white w-full min-h-full rounded-2xl p-4 pb-1">
-                <h3 className="text-2xl md:text-3xl font-medium font-poppins text-(--main-primary-text-color)">
-                  Financing Eligibility Checker
-                </h3>
-                <p className="font-popping text-(--main-primary-text-color) mt-2 text-lg">
-                  Know if you qualify for loans or support in under 2 minutes.
-                </p>
-                <div className="pt-5">
-                  <Image
-                    src="/assets/mobile-notifications_one.png"
-                    alt="mobile-img"
-                    width={500}
-                    height={531}
-                    sizes="100vw"
-                    className="w-full h-auto object-contain rounded-3xl"
-                  />
-                </div>
+           <div className="w-1/4 min-h-48 py-4 bg-white rounded">
+            <div className="w-full flex justify-center items-center mb-5">
+              <div className="w-16 h-16 flex justify-center items-center rounded-full p-1 bg-(--main-theme-background)">
+                <GiMedicines className="text-4xl text-white" />
               </div>
             </div>
-            <div className="md:w-2/5  h-full md:p-4">
-              <div className="bg-white w-full min-h-full rounded-2xl p-4 pb-1">
-                <h3 className="text-2xl md:text-3xl font-medium font-poppins text-(--main-primary-text-color)">
-                  Insurance Coverage Checker
-                </h3>
-                <p className="font-popping text-(--main-primary-text-color) mt-2 text-lg">
-                  See what your policy actually covers before your treatment
-                  starts.
-                </p>
-                <div className="pt-5">
-                  <Image
-                    src="/assets/mobile-notifications_two.png"
-                    alt="mobile-img"
-                    width={500}
-                    height={531}
-                    sizes="100vw"
-                    className="w-full h-auto object-contain rounded-3xl"
-                  />
-                </div>
+            <p className="text-(--main-primary-text-color) font-bold text-lg text-center mb-2">
+              Medicine Intake Tracker
+            </p>
+
+            <p className="text-(--main-primary-text-color) font-semibold text-sm text-center">
+              Diagnostics, therapies, second opinion
+            </p>
+          </div>
+          <div className="w-1/4 min-h-48 py-4 bg-white rounded">
+            <div className="w-full flex justify-center items-center mb-5">
+              <div className="w-16 h-16 flex justify-center items-center rounded-full p-1 bg-(--main-theme-background)">
+                <MdMedicalServices className="text-4xl text-white" />
               </div>
             </div>
+            <p className="text-(--main-primary-text-color) font-bold text-lg text-center mb-2">
+              Treatment Briefcase
+            </p>
+
+            <p className="text-(--main-primary-text-color) font-semibold text-sm text-center">
+              Store and organize all treatment documents
+            </p>
+          </div>
+          <div className="w-1/4 min-h-48 py-4 bg-white rounded">
+            <div className="w-full flex justify-center items-center mb-5">
+              <div className="w-16 h-16 flex justify-center items-center rounded-full p-1 bg-(--main-theme-background)">
+                <LuAlarmClockPlus className="text-4xl text-white" />
+              </div>
+            </div>
+            <p className="text-(--main-primary-text-color) font-bold text-lg text-center mb-2">
+              Smart Reminders
+            </p>
+            <p className="text-(--main-primary-text-color) font-semibold text-sm text-center">
+              Timely alerts for appointments and medications
+            </p>
           </div>
         </div>
+      </div>
     </section>
   );
 };

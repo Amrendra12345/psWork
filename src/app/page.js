@@ -18,6 +18,7 @@ import TrustedUser from "@/components/trusted-user/Trusted-user";
 import UserGallery from "@/components/usergallery/UserGallery";
 import WhatHelps from "./whathelps/WhatHelps";
 import Purpose from "@/components/purpose/Purpose";
+import SmartTools from "@/components/smarttools/SmartTools";
 
 
 export default function Home() {
@@ -41,10 +42,12 @@ export default function Home() {
       <TrustedUser/>  
       <WhatHelps />
       <Purpose />
+      <SmartTools />
+      <HowToWorks />
       {/* <CardUpperEffect/>  */}
        {/* <SelectPlan /> */}
        <CardCarousel sectionTitle="Helping Patients Navigate Care with Ease" />
-       <HowToWorks />
+       
        <CareTakercard />
        <SmartSupport />
         <UserGallery /> 

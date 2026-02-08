@@ -60,3 +60,37 @@ body {
   @apply text-[#6E6E6E]  ;
 }
 
+.setpOne::before{ 
+  position: absolute; 
+  top:48%; 
+  width: 56%;
+  left: 90%;
+  height: 2px;
+  transform: translate(-45%, -100%);   
+  content: ''; 
+    background: repeating-linear-gradient(
+    to right,
+    #1a434e 0px,
+    #1a434e 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  animation: dashMove 1s linear infinite;
+  }
+
+@keyframes dashMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 20px 0;
+  }
+}
+.arrow_dash{
+   position: absolute;
+   top: 40%;
+   left: -30%;
+   transform: rotate(44deg);
+   font-size: 30px;
+   color: #1a434e;
+}
