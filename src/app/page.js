@@ -16,6 +16,7 @@ import StoriesCarousel from "@/components/storiescarousel/StoriesCarousel";
 import TotalStats from "@/components/totalstats/TotalStats";
 import TrustedUser from "@/components/trusted-user/Trusted-user";
 import UserGallery from "@/components/usergallery/UserGallery";
+import WhatHelps from "./whathelps/WhatHelps";
 
 
 export default function Home() {
@@ -37,8 +38,9 @@ export default function Home() {
       />      */}
       
       <TrustedUser/>  
+      <WhatHelps />
       {/* <CardUpperEffect/>  */}
-       <SelectPlan />
+       {/* <SelectPlan /> */}
        <CardCarousel sectionTitle="Helping Patients Navigate Care with Ease" />
        <HowToWorks />
        <CareTakercard />
