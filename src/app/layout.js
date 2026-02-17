@@ -1,7 +1,7 @@
 import { Inter, Epilogue, Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layouts/header/Header";
 import Footer from "@/components/layouts/footer/Footer";
+import Header from "@/components/layouts/footer/header/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,8 +33,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${epilogue.variable} ${poppins.variable} antialiased`}>
       <body>
-        <Header/>
-        {children}
+        <Header />
+        <main>{children}</main>
         <Footer/>
       </body>
     </html>

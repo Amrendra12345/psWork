@@ -10,10 +10,21 @@
   --secondary-theme-backgound: #F3F8F9;
   --main-primary-text-color: #1a434e;
   --main-theme-button-hover:#132b32;
+  --primary-color: #1a434e;
+  --light-primary: #286677;
+  --light-color: #1f505d;
   --secondary-text-color: #6E6E6E;
   --max-width: 1280px;
 }
+@theme {
+  --color-primary: var(--primary-color);
+  --color-primary-text: var(--primary-text-color);  
+  --color-secondary-bg: var(--secondary-background);
+  --color-secondary-text: var(--secondary-text-color);
 
+  --font-inter: var(--font-inter);
+  --font-epilogue: var(--font-epilogue);
+}
 body {
   font-size: 16px;
   font-family: var(--font-inter);
@@ -93,4 +104,36 @@ body {
    transform: rotate(44deg);
    font-size: 30px;
    color: #1a434e;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-50 text-primary-text font-inter flex flex-col min-h-screen overflow-x-hidden;
+  }
+}
+@layer components {
+   nav{
+    @apply w-full;
+   }
+  .menu{
+    @apply max-w-[94%] mx-auto px-3 md:px-0 md:py-0 md:my-0 py-4 my-3 bg-black/20 md:bg-transparent rounded flex gap-0 flex-col md:flex-row md:flex-5 md:justify-end;
+  }
+  .menu>li>a{
+    @apply py-2 block px-3;
+  }
+  .menu>li>span{
+    @apply py-2 px-3 w-full flex justify-between gap-0 md:gap-1 items-center cursor-pointer;
+  }
+  .menu>li>ul{
+    @apply bg-black/15 ;
+  }
+  .menu>li>ul>li>span{
+    @apply py-2 px-3 flex justify-between items-center gap-0;
+  }
+  .menu>li>ul>li>ul{
+    @apply bg-black/10 p-2;
+  }
+  .menu>li>ul > li > ul > li > a{
+    @apply block py-2 px-3 hover:bg-primary;
+  }
 }

@@ -4,7 +4,7 @@ import { FaHandHoldingMedical } from "react-icons/fa";
 
 export default function TrustedUser() {
   return (
-    <div className='relative z-40 bg-[#f0f8f9] rounded-t-4xl -mt-13'>
+    <div className='relative z-40 bg-[#f0f8f9] rounded-t-3xl -mt-5'>
         <div className='max-w-7xl mx-auto'>
         <ul className='flex justify-between items-center py-4 px-6 rounded '>
             <li className='flex gap-2 items-center text-lg font-semibold font-epilogue -tracking-wider'><FiUsers className="text-3xl text-green-900" /> Trusted by thousands of users”</li>
