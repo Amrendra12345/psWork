@@ -1,20 +1,7 @@
-"use client"
 import Link from "next/link";
-import { useState } from "react";
 import { BsChevronDown, BsChevronRight } from "react-icons/bs";
 
-export default function Navigation({isOpen}) {
-  const [openIndex, setOpenIndex] = useState(null);
-  const [openSubIndex, setOpenSubIndex] = useState(null);
-
-  const toggleMenu = (i) => {
-    setOpenIndex(openIndex === i ? null : i);
-    setOpenSubIndex(null);
-  };
-
-  const toggleSubMenu = (j) => {
-    setOpenSubIndex(openSubIndex === j ? null : j);
-  };
+export default function Navigation() {
   const menuItems = [
     { title: "Home", href: "/" },
     {
@@ -74,13 +61,7 @@ export default function Navigation({isOpen}) {
   ];
   return (
     <>
-     <nav
-      className={`
-        ${isOpen ? "block" : "hidden"}
-        md:block text-white border-t mt-2 md:mt-0 border-t-white/10 md:border-t-0 bg-primary md:bg-transparent
-      `}
-    >
-      <ul className="menu">
+      <ul className="flex gap-5">
         {menuItems.map((item, i) => {
           return item.href ? (
             <li key={i}>
@@ -91,47 +72,43 @@ export default function Navigation({isOpen}) {
           ) : (
             <li
               key={i}
-              className="relative group"
+              className="relative group text-white flex gap-1 items-center"
             >
-              <span onClick={() => toggleMenu(i)} > {item.title} <BsChevronDown className={`text-sm transition-transform duration-300 
-                    ${openIndex === i ? "rotate-180" : ""}
-                     md:group-hover:rotate-180`} /></span>
+              {item.title} <BsChevronDown className="text-sm" />
               {item.children && (
                 <ul
-                  className={`childMenu md:shadow-2xl
-                  md:absolute md:right-0 md:top-full md:bg-white rounded md:py-2
-                  md:opacity-0 md:invisible md:text-gray-700 md:group-hover:opacity-100 md:group-hover:visible  transition-all duration-300 
-                  ${item.title === "Services" ? "w-full md:w-75" : "w-full md:w-55"}
-                  ${openIndex === i ? "max-h-150 opacity-100 mt-3 py-2" : "max-h-0 opacity-0"}  
-                  md:group-hover:max-h-150                
-                  `
-                }
+                  className={`absolute right-0 top-full bg-white rounded shadow-md py-2 z-50
+                  opacity-0 invisible translate-y-6 text-gray-700 group-hover:opacity-100 group-hover:visible group-hover:translate-y-3 transition-all duration-300 
+                  ${
+                    item.title === "Services"
+                      ? "w-75"                      
+                      : "w-55"
+                  }`}
                 >
                   {item.children.map((child, j) => (
                     <li
                       key={j}
-                      className="relative group/submenu cursor-pointer hover:bg-primary md:hover:bg-gray-100"
+                      className="relative group/submenu px-3 py-2 flex justify-between items-center hover:bg-gray-100 cursor-pointer"
                     >
-                      <span onClick={() => toggleSubMenu(j)}>{child.title}
-                      {child.children && <BsChevronRight className={`text-xs transition-transform md:group-hover/submenu:rotate-90 ${openSubIndex === j ? "rotate-90" : ""}`} />}</span>
+                      <span>{child.title}</span>
+                      {child.children && <BsChevronRight className="text-xs" />}
                       {child.children && (
                         <ul
-                          className={`subMenu md:shadow-2xl
-                            md:absolute md:left-full md:top-0  md:bg-white rounded md:py-2
-                            md:opacity-0 md:invisible md:translate-x-4
-                            md:group-hover/submenu:opacity-100
-                            md:group-hover/submenu:visible
-                            md:group-hover/submenu:translate-x-1
+                          className={`
+                            absolute left-full top-0  bg-white shadow-md rounded py-2
+                            opacity-0 invisible translate-x-4
+                            group-hover/submenu:opacity-100
+                            group-hover/submenu:visible
+                            group-hover/submenu:translate-x-1
                             transition-all duration-300
-                            ${j==0 ? "w-full md:w-80":"w-full md:w-60"}
-                            ${openSubIndex === j ? "max-h-150 opacity-100" : "max-h-0 md:max-h-150 opacity-0 overflow-hidden"}
+                            ${j==0 ? "w-80":"w-60"}
                           `}
                         >
                           {child.children.map((sub, k) => (
                             <li key={k}>
                               <Link
                                 href={sub.href}
-                                className="hover:bg-primary md:hover:bg-gray-100"
+                                className="block px-3 py-2 hover:bg-gray-100"
                               >
                                 {sub.title}
                               </Link>
@@ -143,13 +120,15 @@ export default function Navigation({isOpen}) {
                   ))}
                 </ul>
               )}
-            </li>            
+            </li>
           );
         })}
-         <li className="mt-4 mb-1 md:mt-0 md:md-0">
+      </ul>
+      <ul className="flex gap-4">
+        <li>
           <Link
             href="/"
-            className="block text-center text-gray-700 bg-gray-100 rounded py-3 px-4"
+            className="text-gray-700 bg-gray-100 rounded py-3 px-4"
           >
             Get Financial Assistance
           </Link>
@@ -157,15 +136,12 @@ export default function Navigation({isOpen}) {
         <li>
           <Link
             href="/"
-            className="block text-center text-gray-700 bg-gray-100 rounded py-3 px-4"
+            className="text-gray-700 bg-gray-100 rounded py-3 px-4"
           >
             Apply for PAP
           </Link>
         </li>
       </ul>
-      
-     </nav>
-     
     </>
   );
 }

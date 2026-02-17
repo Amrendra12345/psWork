@@ -116,7 +116,7 @@ body {
     @apply w-full;
    }
   .menu{
-    @apply max-w-[94%] mx-auto px-3 md:px-0 md:py-0 md:my-0 py-4 my-3 bg-black/20 md:bg-transparent rounded flex gap-0 flex-col md:flex-row md:flex-5 md:justify-end;
+     @apply max-w-[94%] mx-auto px-3 md:px-0 md:py-0 md:my-0 py-4 my-3 bg-black/20 md:bg-transparent rounded flex gap-0 md:gap-4 flex-col md:flex-row md:flex-5 md:justify-end;
   }
   .menu>li>a{
     @apply py-2 block px-3;

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { HiBars3 } from "react-icons/hi2";
 const Logo = ({isOpen,setIsOpen}) => {
   return (
-    <Link href="/" className="flex items-center w-full justify-between">
+    <Link href="/" className="flex items-center w-full md:w-60 justify-between">
       <div className="w-10 h-14 flex justify-start items-center">
         <Image
           src={"/assets/logo.png"}
