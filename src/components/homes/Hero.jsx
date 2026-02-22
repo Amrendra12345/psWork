@@ -17,10 +17,10 @@ const Hero = () => {
                 </div>
             </div>
             <div className="w-full md:w-1/2 relative p-4">
-               <div className="relative">
-                <Image src={'/assets/home_bg244.png'} className="w-full h-auto rounded" width={600} height={500} alt="banner" />
-                </div>
-                
+               <div className="relative -mr-5 ">
+                <Image src={'/assets/home_bg244.png'} className="w-full h-auto rounded" width={600} height={500} alt="banner" />                
+                </div>  
+                <div className="absolute top-0 -left-4 w-[120%] h-full bg-[linear-gradient(275deg,rgba(26,67,78,0)_59%,#1A434E_94.06%),linear-gradient(360deg,rgba(26,67,78,0)_70%,#1A434E_92.03%)]"></div>              
             </div>
         </div>
     </section>

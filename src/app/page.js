@@ -9,7 +9,6 @@ import Growth from "@/components/growth/Growth";
 import HowToWorks from "@/components/howworks/HowToWorks";
 import JoinCommunity from "@/components/joincommunity/JoinCommunity";
 import NeedAndSupport from "@/components/needAndSupport/NeedAndSupport";
-import SelectPlan from "@/components/selectplan/SelectPlan";
 import SmartSupport from "@/components/smartsupport/SmartSupport";
 import StoriesCarousel from "@/components/storiescarousel/StoriesCarousel";
 import TotalStats from "@/components/totalstats/TotalStats";
@@ -27,6 +26,7 @@ import Hero from "@/components/homes/Hero";
 export default function Home() {
   return (
     <>
+     
       <Hero/>    
       <TrustedUser/>  
       <WhatHelps />
