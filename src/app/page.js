@@ -14,13 +14,14 @@ import StoriesCarousel from "@/components/storiescarousel/StoriesCarousel";
 import TotalStats from "@/components/totalstats/TotalStats";
 import TrustedUser from "@/components/trusted-user/Trusted-user";
 import UserGallery from "@/components/usergallery/UserGallery";
-import WhatHelps from "./whathelps/WhatHelps";
+
 import Purpose from "@/components/purpose/Purpose";
 import SmartTools from "@/components/smarttools/SmartTools";
 import WhatSay from "@/components/whatSay/WhatSay";
 import UserTestimonials from "@/components/usertestimonials/UserTestimonials";
 import GrowingSupport from "@/components/growth/GrowingSupport";
 import Hero from "@/components/homes/Hero";
+import WhatHelps from "@/components/whathelps/WhatHelps";
 
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
       <SmartTools />
       <HowToWorks />
       <WhatSay />
-       <UserTestimonials />
+      <UserTestimonials />
        <GrowingSupport/>
       {/* <CardUpperEffect/>  */}
        {/* <SelectPlan /> */}

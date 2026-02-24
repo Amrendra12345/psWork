@@ -164,7 +164,7 @@ const [sliderRef] = useKeenSlider({
                     {card.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="bg-white inline-flex items-center text-[var(--main-primary-text-color)] text-sm rounded-full py-2 px-3"
+                        className="bg-white inline-flex items-center text-(--main-primary-text-color) text-sm rounded-full py-2 px-3"
                       >
                         {tag}
                       </span>
@@ -182,7 +182,7 @@ const [sliderRef] = useKeenSlider({
               role="button"
               className="cursor-pointer absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2  text-white px-3 py-2 rounded-full z-10"
             >
-              <CircleChevronLeft className="bg-[var(--main-theme-background)] rounded-full w-[42px] h-[42px] md:w-[35px] md:h-[35px]" />
+              <CircleChevronLeft className="bg-(--main-theme-background) rounded-full w-10.5 h-10.5 md:w-9 md:h-9" />
             </button>
             <button
               onClick={handleNext}
