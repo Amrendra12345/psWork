@@ -10,6 +10,9 @@ import Image from "next/image";
 export default function WhatHelps() {
   return (
     <section className="w-full py-8 px-4 md:10">
+        <h2 className="pt-6 pb-4 leading-normal md:leading-12 text-(--main-primary-text-color) mb-3 md:mb-6 rounded-3xl text-3xl md:text-4xl font-bold text-center">
+          What icanheal helps you with
+        </h2>
       <div className="w-full gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-8">
         <div className="relative border rounded-lg border-gray-100 overflow-hidden z-10">
           <Image src={'/assets/placeholder2.png'} width={400} height={350}  className="w-full h-auto rounded z-10" alt="what helps" />
@@ -18,29 +21,30 @@ export default function WhatHelps() {
                  Smart Tools
             </h3>
             <p className="text-lg text-white rounded-full font-medium absolute top-4 right-4 border border-white py-2 px-6 transition-all duration-500 hover:bg-white hover:text-black/75 cursor-pointer">Explore</p>
-              <div className="flex gap-1 justify-between px-6 pt-1 -mt-5">
+              <p className="text-lg font-bold -mt-6  text-white text-center tracking-wider z-20 relative ">Financial & Assistance Programs</p>
+              <div className="flex gap-1 justify-between px-6 pt-1 mt-2">
               <ul className="py-2 relative z-10">
-                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
+                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 bg-[#8b8380] hover:bg-white hover:text-black/75">
                   
                   PAP
                 </li>
-                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
+                <li className="text-sm bg-[#8b8380] text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
                   
                   Financial Aid
                 </li>
               </ul>
               <ul className="py-2 relative z-10">
-                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
+                <li className="text-sm bg-[#8b8380] text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
                  
                   Insurance
                 </li>
-                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">                
+                <li className="text-sm bg-[#8b8380] text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">                
                   Grievances
                 </li>
               </ul>
             </div>
           </div>
-           <div className=" absolute top-0 left-0 bg-[linear-gradient(224deg,rgba(26,67,78,0)_50%,#a39692_65%),linear-gradient(178deg,rgba(26,67,78,0)_70%,#161f1e_75%)] h-full w-full z-0"></div>
+           <div className=" absolute top-0 left-0  bg-[linear-gradient(218deg,transparent_45%,#b5aaa5_58%),linear-gradient(156deg,transparent_60%,#212e2e_64%)] h-full w-full z-0"></div>
         </div>
         <div className="relative border rounded-lg border-gray-100 bg-primary overflow-hidden">
            
@@ -53,13 +57,13 @@ export default function WhatHelps() {
          
                <div className="px-4 pb-5 pt-10">
                   <ul className="py-2 relative z-10 flex gap-5 justify-between items-center">
-                    <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
+                    <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
                       Diagnostics
                     </li>
-                    <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
+                    <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
                       Therapies
                     </li>
-                     <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
+                     <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
                       Second Opinion
                     </li>
                   </ul>
@@ -81,39 +85,33 @@ export default function WhatHelps() {
                  Smart Tools
             </h3>
             <p className="text-lg text-white rounded-full font-medium absolute top-4 right-4 border border-white py-2 px-6 transition-all duration-500 hover:bg-white hover:text-black/75 cursor-pointer">Explore</p>
-              <div className="flex gap-1 justify-between px-6 pt-1 -mt-5">
+              <p className="text-lg font-bold -mt-6  text-white text-center tracking-wider z-20 relative ">Smart Health Tools</p>
+              <div className="flex gap-1 justify-between px-6 pt-1 mt-2">
               <ul className="py-2 relative z-10">
-                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
-                  
-                  PAP
+                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 bg-[#8b8380] hover:bg-white hover:text-black/75">
+                  Report Summary
                 </li>
-                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
+                <li className="text-sm bg-[#8b8380] text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
                   
-                  Financial Aid
+                  Medicine Intake
                 </li>
               </ul>
               <ul className="py-2 relative z-10">
-                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
-                 
-                  Insurance
-                </li>
-                <li className="text-sm text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-3 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">                
-                  Grievances
-                </li>
+                <li className="text-sm bg-[#8b8380] text-gray-100 font-semibold tracking-wider py-1.5 border border-white/50 rounded-full px-5 text-center mb-4 cursor-pointer transition-all duration-300 hover:bg-white hover:text-black/75">
+                 Briefcase
+                </li>               
               </ul>
             </div>
           </div>
-           <div className=" absolute top-0 left-0 bg-[linear-gradient(224deg,rgba(26,67,78,0)_50%,#a39692_65%),linear-gradient(178deg,rgba(26,67,78,0)_70%,#161f1e_75%)] h-full w-full z-0"></div>
-        </div>        
+           <div className=" absolute top-0 left-0  bg-[linear-gradient(218deg,transparent_45%,#b5aaa5_58%),linear-gradient(156deg,transparent_60%,#212e2e_64%)] h-full w-full z-0"></div>
+        </div>       
        
       </div>
  
 
 
       <div className="max-w-7xl mx-auto">
-        <h2 className="pt-6 pb-4 leading-normal md:leading-12 text-(--main-primary-text-color) mb-3 md:mb-6 rounded-3xl text-3xl md:text-4xl font-bold text-center">
-          What icanheal helps you with
-        </h2>
+        
         
         <div className="w-full flex justify-between items-center gap-5">
           <div className="w-3/12 py-5 px-4 rounded-lg border border-zinc-100 transition-all duration-300 hover:border-green-200">
